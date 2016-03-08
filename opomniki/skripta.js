@@ -17,4 +17,20 @@ window.addEventListener('load', function() {
 	}
 	setInterval(posodobiOpomnike, 1000);
 	
+	var prijavi = function(event){
+		//Get name
+		var uporabnik = document.querySelector("#uporabnisko_ime").value;
+		
+		//Set name
+		document.querySelector("#uporabnik").innerHTML = uporabnik;
+		
+		//hide pokrivalo
+		document.querySelector(".pokrivalo").style.visibility = "hidden";
+	};
+
+	document.querySelector("#prijavniGumb").addEventListener("click", prijavi);
 });
+
+
+
+
